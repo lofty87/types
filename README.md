@@ -21,3 +21,9 @@ import { AsyncFunction, Function, Object } from '@lofty87/types/common';
 ```ts
 import { ModelPartial } from '@lofty87/types/model';
 ```
+
+* ModelPartial
+  * advanced Partial
+  * mongoose model based
+  * contains some mongoose opertor syntax
+  * limit depth of model schema to a maximum of 3
