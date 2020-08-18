@@ -1,6 +1,6 @@
 # @lofty87/types
 
-common, model types defined only for lofty87's project
+this module is for **type definition** only in the lofty87 project
 
 ## 1. Installation
 
