@@ -1,11 +1,12 @@
 {
   "name": "@lofty87/types",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "common, model types defined only for lofty87's project",
   "author": {
     "name": "lofty87",
     "email": "lofty87@daum.net"
   },
+  "main": "index.ts",
   "license": "MIT",
   "homepage": "https://github.com/lofty87/types",
   "bugs": {
