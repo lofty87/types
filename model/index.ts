@@ -7,8 +7,15 @@
  * ! limit depth of model schema to a maximum of 3
  */
 
-type Operators = {
-  $in: number[] | string[];
+type ComparisonOperators = {
+  $eq?: number | string;
+  $ne?: number | string;
+  $in?: number[] | string[];
+  $nin?: number[] | string[];
+  $gt?: number;
+  $gte?: number;
+  $lt?: number;
+  $lte?: number;
 };
 
 type Model<M> = {
@@ -18,11 +25,18 @@ type Model<M> = {
         [K2 in keyof M[K1]]?:
           | M[K1][K2]
           | {
-              [K3 in keyof M[K1][K2]]?: M[K1][K2][K3] | Operators;
+              [K3 in keyof M[K1][K2]]?: M[K1][K2][K3] | ComparisonOperators;
             }
-          | Operators;
+          | ComparisonOperators;
       }
-    | Operators;
+    | ComparisonOperators;
+};
+
+type LogicalOperators<M> = {
+  $and?: Model<M>;
+  $or?: Model<M>;
+  $nor?: Model<M>;
+  $unset?: Model<M>;
 };
 
 type TextSearch = {
@@ -32,8 +46,6 @@ type TextSearch = {
 };
 
 export type ModelPartial<M> =
-  | {
-      $unset?: Model<M>;
-    }
   | Model<M>
+  | LogicalOperators<M>
   | TextSearch;
