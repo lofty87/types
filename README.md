@@ -23,4 +23,4 @@ import {
   * advanced Partial
   * mongoose model based
   * contains some mongoose opertor syntax
-  * limit depth of model schema to a maximum of 3
+  * limit(sub domain) of model schema is maximum of 3
