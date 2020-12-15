@@ -1,6 +1,6 @@
 {
   "name": "@lofty87/types",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "this module is for type definition only in the lofty87 project",
   "author": {
     "name": "lofty87",
@@ -22,8 +22,8 @@
     "mongoose"
   ],
   "devDependencies": {
-    "@lofty87/eslint-config": "~1.1.27",
-    "eslint": "~7.6.0",
-    "typescript": "~3.9.7"
+    "@lofty87/eslint-config": "^1.1.28",
+    "eslint": "^7.6.0",
+    "typescript": "^3.9.7"
   }
 }
